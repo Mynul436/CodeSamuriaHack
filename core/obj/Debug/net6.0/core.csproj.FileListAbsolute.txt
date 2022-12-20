@@ -1,0 +1,108 @@
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/bin/Debug/net6.0/core.deps.json
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/bin/Debug/net6.0/core.dll
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/bin/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/bin/Debug/net6.0/core.pdb
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.dll
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Excel_Technology/Assignment Test/Backend/core/obj/Debug/net6.0/core.pdb
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/bin/Debug/net6.0/core.deps.json
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/bin/Debug/net6.0/core.dll
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/bin/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/bin/Debug/net6.0/core.pdb
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.dll
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Project350/Backend/KroyBikroySite/core/obj/Debug/net6.0/core.pdb
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/bin/Debug/net6.0/core.deps.json
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/bin/Debug/net6.0/core.dll
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/bin/Debug/net6.0/ref/core.dll
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/bin/Debug/net6.0/core.pdb
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.dll
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/ref/core.dll
+/home/abir/Documents/Project350_fahim/KroyBikroySite/core/obj/Debug/net6.0/core.pdb
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/bin/Debug/net6.0/core.deps.json
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/bin/Debug/net6.0/core.dll
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/bin/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/bin/Debug/net6.0/core.pdb
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.dll
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/ref/core.dll
+/home/fahim/Documents/Project350/Nov_21_22/KroyBikroySite/core/obj/Debug/net6.0/core.pdb
+E:/Swe3.2/Project350/KroyBikroySite/core/bin/Debug/net6.0/core.deps.json
+E:/Swe3.2/Project350/KroyBikroySite/core/bin/Debug/net6.0/core.dll
+E:/Swe3.2/Project350/KroyBikroySite/core/bin/Debug/net6.0/core.pdb
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.dll
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/refint/core.dll
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/core.pdb
+E:/Swe3.2/Project350/KroyBikroySite/core/obj/Debug/net6.0/ref/core.dll
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.deps.json
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.dll
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.pdb
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.dll
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/refint/core.dll
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.pdb
+C:/Users/ASUS/Downloads/KroyBikroySite-day-1/core/obj/Debug/net6.0/ref/core.dll
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.deps.json
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.dll
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.pdb
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.dll
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/refint/core.dll
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.pdb
+E:/Swe3.2/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/ref/core.dll
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.deps.json
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.dll
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/bin/Debug/net6.0/core.pdb
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.AssemblyReference.cache
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.GeneratedMSBuildEditorConfig.editorconfig
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfoInputs.cache
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.AssemblyInfo.cs
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.csproj.CoreCompileInputs.cache
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.dll
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/refint/core.dll
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/core.pdb
+/home/student/Documents/GLIMPSE_OF_SUST/CodeSamurai/CodeSamuraiDemo/KroyBikroySite-day-1/core/obj/Debug/net6.0/ref/core.dll
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\bin\Debug\net6.0\core.deps.json
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\bin\Debug\net6.0\core.dll
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\bin\Debug\net6.0\core.pdb
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.csproj.AssemblyReference.cache
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.AssemblyInfoInputs.cache
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.AssemblyInfo.cs
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.csproj.CoreCompileInputs.cache
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.dll
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\refint\core.dll
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\core.pdb
+C:\Users\mynul\Downloads\KroyBikroySite-day-1\core\obj\Debug\net6.0\ref\core.dll
