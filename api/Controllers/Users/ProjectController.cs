@@ -22,6 +22,24 @@ namespace api.Controllers.Users
         }
 
 
+        [HttpGet("citizen")]
+        public async Task<IActionResult> GetProjectListCitizen([FromQuery]CitizenGetProjectDto citizenGetProject)
+        {
+            var query = await _unitOfWork.ProjectRepository.GetAllAsync();
+
+            var result = new List<Project>();
+            // foreach(var project in query)
+            // {
+            //     double distance =Math.Sqrt((project.latitude - citizenGetProject.latitude) * (project.latitude - citizenGetProject.latitude) + (project.longitude-citizenGetProject.logitude)*(project.longitude - citizenGetProject.logitude));
+
+            //     if(distance <= citizenGetProject.radious){
+            //         result.Add(project);
+            //     }
+            // }
+    
+            return Ok(query);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetProjectList()
         {

@@ -10,6 +10,5 @@ namespace api.Dto
         public double logitude {get;set;}
         public double latitude {get;set;}
         public double radious {get;set;}
-        public double location {get;set;}
     }
 }
