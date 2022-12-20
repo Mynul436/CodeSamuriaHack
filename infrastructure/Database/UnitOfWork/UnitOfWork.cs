@@ -26,6 +26,8 @@ namespace infrastructure.Database.UnitOfWork
 
         public IRepository<Citizen> CitizenRepository => new Repository<Citizen>(_context);
 
+        public IRepository<ProjectRatting> RattingRepository => new Repository<ProjectRatting>(_context);
+
         public async Task CommitAsync()
         {
             await _context.SaveChangesAsync();

@@ -68,8 +68,24 @@ namespace api.Controllers.Users
         }
 
 
-       // [HttpGet("get-projects")]
-      //  [Authorize(Roles ="EXEC")]
-       // public async Task
+        
+        [HttpPost("add-feedback")]
+        [Authorize(Roles = "CITIZEN")]
+        public async Task<IActionResult> AddRattingAndFeedBack(AddFeedBackRatting ratting)
+        {
+            if(!await _unitOfWork.ProjectRepository.isExitAsync(filter => filter.project_id == ratting.project_id))
+                return BadRequest();
+                
+
+            var _ratting = new ProjectRatting();
+            _ratting.project_id = ratting.project_id;
+            _ratting.feedback = ratting.feedback;
+            _ratting.ratting = ratting.ratting;
+
+            _unitOfWork.RattingRepository.AddAsync(_ratting);
+            await _unitOfWork.CommitAsync();
+
+            return Ok();
+        }
     }
 }

@@ -78,6 +78,7 @@ namespace infrastructure.Database.StoreContext
         public DbSet<Proposals> Proposals {get;set;}
         public DbSet<Agency> Agencies{get;set;}
         public DbSet<Citizen> Citizens {get;set;}
+        public DbSet<ProjectRatting> Rattings {get;set;}
 
     }
 }

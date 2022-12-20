@@ -20,6 +20,7 @@ namespace core.Interfaces
         IComponentType ComponentTypeRepository {get;}
 
         IRepository<Citizen> CitizenRepository {get;}
+        IRepository<ProjectRatting> RattingRepository{get;}
    
         Task CommitAsync();
         Task RollbackAsync();        

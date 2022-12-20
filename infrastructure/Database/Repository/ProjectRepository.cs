@@ -23,8 +23,6 @@ namespace infrastructure.Database.Repository
     
 
             var projects = await PagedList<Project>.CreateAsync(query, 1, 10);
-
-
            
             return projects;
         }
@@ -32,6 +30,8 @@ namespace infrastructure.Database.Repository
         public async Task<PagedList<Project>> GetProjectsCitizen(double longitide, double latitude, double radious)
         {
             var query = _context.Projects.AsQueryable();
+
+            query = query.OrderByDescending(x => x.completion);
 
             var result = await PagedList<Project>.CreateAsync(query, 1, 1000);
 
