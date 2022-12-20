@@ -47,8 +47,8 @@ namespace api.Controllers
             var res = new LoginResDto();
             res.Id = _citizen.Id.ToString();
             res.name = _citizen.name;
-            res.role = _citizen.role;
-            res.token = _tokenService.CreateToken(_citizen.role).Item1;
+            res.role = "CITIZEN";
+            res.token = _tokenService.CreateToken("CITIZEN").Item1;
             await _unitOfWork.CommitAsync();
             return Ok(res);
         }
@@ -67,8 +67,8 @@ namespace api.Controllers
                 var res = new LoginResDto();
                 res.Id = citizen.Id.ToString();
                 res.name = citizen.name;
-                res.role = citizen.role;
-                res.token = _tokenService.CreateToken(citizen.role).Item1;
+                res.role = "CITIZEN";
+                res.token = _tokenService.CreateToken("CITIZEN").Item1;
                 return Ok(res);
             }
 

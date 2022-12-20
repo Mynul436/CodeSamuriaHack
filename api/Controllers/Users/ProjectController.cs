@@ -66,5 +66,10 @@ namespace api.Controllers.Users
             var query = await _unitOfWork.ProjectRepository.getProposedProject(code);
             return Ok(query);
         }
+
+
+       // [HttpGet("get-projects")]
+      //  [Authorize(Roles ="EXEC")]
+       // public async Task
     }
 }
