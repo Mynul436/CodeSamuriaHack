@@ -5,6 +5,7 @@ using core.Entities.Model;
 using core.Interfaces;
 using CsvHelper;
 using CsvHelper.Configuration;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers.Users
@@ -28,61 +29,42 @@ namespace api.Controllers.Users
             var query = await _unitOfWork.ProjectRepository.GetAllAsync();
 
             var result = new List<Project>();
-            // foreach(var project in query)
-            // {
-            //     double distance =Math.Sqrt((project.latitude - citizenGetProject.latitude) * (project.latitude - citizenGetProject.latitude) + (project.longitude-citizenGetProject.logitude)*(project.longitude - citizenGetProject.logitude));
-
-            //     if(distance <= citizenGetProject.radious){
-            //         result.Add(project);
-            //     }
-            // }
-    
             return Ok(query);
         }
+  
 
-        [HttpGet]
-        public async Task<IActionResult> GetProjectList()
+        [HttpPost("Add-proposal")]
+        [Authorize(Roles = "EXEC")]
+        public async Task<IActionResult> AddProjectProposal(AddProjectProposal projectProposal)
         {
-            // var projects = await _unitOfWork.ProjectRepository.GetAllAsync();
+            var proposal = _mapper.Map<Proposals>(projectProposal);
+            proposal.proposal_date = DateTime.Now;
+            proposal.project_id = Guid.NewGuid().ToString();
 
-            // foreach(var project in projects)
-            // {
-            //    var locations = await _unitOfWork.LocationRepository.FindAsync(filter => filter.ProjectId== project.Id);
-            //    foreach(var loc in locations)
-            //    {
-            //     var _loc = new Location();
-                
-            //     _loc.Latitude = loc.Latitude;
-            //     _loc.Logitude = loc.Logitude;
+            _unitOfWork.ProposalRepository.AddAsync(proposal);
+            await _unitOfWork.CommitAsync();
+            return Ok("Add new proposal");
+        }
 
-            //     if(project.Locations.Any(filter => filter.Latitude == _loc.Latitude && filter.Logitude == _loc.Logitude)){
-            //         continue;
-            //     }
-            //     project.Locations.Add(_loc);
-            //    }
+        [HttpPut("udpate-proposal")]
+        [Authorize(Roles ="EXEC")]
+        public async Task<IActionResult> UpdateProjectProposal(Proposals proposals)
+        {
+            var prosal = await _unitOfWork.ProposalRepository.FindOneAsync(filter => filter.project_id == proposals.project_id);
 
+            if(prosal == null) return BadRequest();
 
-            //    var affiliated_agency = await _unitOfWork.AffiliatedAgencyRepository.FindAsync(filter => filter.ProjectId == project.Id);
-            //    foreach(var aff in affiliated_agency)
-            //    {
-            //     var _aff = new AffiliatedAgency();
-            //     _aff.Name = aff.Name;
-
-            //     if(project.AffiliatedAgencies.Any(filter => filter.Name == _aff.Name)) continue;
-            //     project.AffiliatedAgencies.Add(_aff);
-            //    }
-
-            //    var category = await _unitOfWork.CategoryRepository.FindOneAsync(filter => filter.ProjectId == project.Id);
-            //    project.Category = category;
-            // }
-
-            // var location = await _unitOfWork.LocationRepository.FindAsync(filter => filter.ProjectId==13);
-            
-            // return Ok(_mapper.Map<List<ProjectViewDto>>(projects));
-
+            var _prosal = _mapper.Map<Proposals>(proposals);
+            _unitOfWork.ProposalRepository.UpdateAsync(proposals);
             return Ok();
+        }   
 
-
+        [HttpGet("get-proposal")]
+        [Authorize(Roles ="EXEC")]
+        public async Task<IActionResult> GetProposedProject(string code)
+        {
+            var query = await _unitOfWork.ProjectRepository.getProposedProject(code);
+            return Ok(query);
         }
     }
 }

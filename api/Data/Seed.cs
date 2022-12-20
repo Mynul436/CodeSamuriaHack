@@ -90,7 +90,7 @@ namespace api.Data
                     if(i == 0) agency.code = value;
                     if(i == 1) agency.name = value;
                     if(i == 2) agency.type = value;
-                    if(i == 3) agency.type = value;
+                    if(i == 3) agency.description = value;
 
                 }
 

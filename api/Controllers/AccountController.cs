@@ -31,7 +31,12 @@ namespace api.Controllers
         public async Task<IActionResult> CitizenRegistration(CitizenRegDto citizen)
         {
             
-            if(await _unitOfWork.CitizenRepository.isExitAsync(filter => filter.email == citizen.email)) 
+            if(await _unitOfWork.CitizenRepository.isExitAsync(filter => filter.email == citizen.email) 
+            
+                || 
+
+                await _unitOfWork.AgencyRepository.isExitAsync(filter => filter.email == citizen.email)
+                ) 
                 return BadRequest("User already exit");
 
             var _citizen = _mapper.Map<Citizen>(citizen);
@@ -48,14 +53,17 @@ namespace api.Controllers
             return Ok(res);
         }
 
-        [HttpPost("Citizen-login")]
+        [HttpPost("login")]
         public async Task<IActionResult> CitizenLogin(LoginDto login)
         {
             var citizen = await _unitOfWork.CitizenRepository.FindOneAsync(filter => filter.email == login.email);
-            if(citizen == null) return BadRequest("Not Valid Email");
 
-            
-            if(citizen.password == login.password){
+            var agency = await _unitOfWork.AgencyRepository.FindOneAsync(filter => filter.email == login.email);
+
+            if(citizen == null && agency == null) return BadRequest("Not Valid Email");
+
+           
+            if(citizen != null &&  citizen.password == login.password){
                 var res = new LoginResDto();
                 res.Id = citizen.Id.ToString();
                 res.name = citizen.name;
@@ -64,10 +72,55 @@ namespace api.Controllers
                 return Ok(res);
             }
 
+            if(agency !=  null && agency.password == login.password)
+            {
+                var res = new LoginResDto();
+                res.code = agency.code;
+                res.Id = agency.Id.ToString();
+                res.name = agency.name;
+                res.role = agency.type;
+                res.token = _tokenService.CreateToken(agency.type).Item1;
+                return Ok(res);
+            }
+
             return BadRequest("Wrong Password");
         }
 
 
+        [HttpGet("agency-code-validation")]
+        public async Task<IActionResult> AgencyCodeValidation(string code)
+        {
+            if(!await _unitOfWork.AgencyRepository.isExitAsync(filter => filter.code == code))
+                return Ok(true);
+            return BadRequest();
+        }
+        
+
+        [HttpPost("Agency-reg")]
+        public async Task<IActionResult> AgencyRegistration(AgencyRegDto agencyRegDto)
+        {
+
+            if( await _unitOfWork.AgencyRepository.isExitAsync(filter => filter.email == agencyRegDto.email)
+
+                || 
+
+                await _unitOfWork.CitizenRepository.isExitAsync(filter => filter.email == agencyRegDto.email))
+
+                return BadRequest("Email already Exits");
+
+            var agency = _mapper.Map<core.Entities.Model.Agency>(agencyRegDto);
+            agency.code = RadomString.RandomString(4);
+
+            var res = new LoginResDto();
+           
+            res.Id = agency.Id.ToString();
+            res.name = agency.name;
+            res.role = agency.type;
+            res.token = _tokenService.CreateToken(agency.type).Item1;
+
+            return Ok(res);
+
+        }
         // [HttpPost]
         // public async Task<IActionResult> Register(Signup signup)
         // {

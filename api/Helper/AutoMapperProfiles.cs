@@ -14,6 +14,9 @@ namespace api.Helper
             // CreateMap<Signup, User>();
 
             CreateMap<CitizenRegDto, Citizen>();
+            CreateMap<AgencyRegDto, core.Entities.Model.Agency>();
+            CreateMap<AddProjectProposal, Proposals>();
+            CreateMap<Proposals, Proposals>();
 
             
             // CreateMap<Product, AddProductDto>();

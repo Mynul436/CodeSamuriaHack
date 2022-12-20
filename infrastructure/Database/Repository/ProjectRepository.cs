@@ -28,5 +28,24 @@ namespace infrastructure.Database.Repository
            
             return projects;
         }
+
+        public async Task<PagedList<Project>> GetProjectsCitizen(double longitide, double latitude, double radious)
+        {
+            var query = _context.Projects.AsQueryable();
+
+            var result = await PagedList<Project>.CreateAsync(query, 1, 1000);
+
+            return result;
+        }
+
+        public async Task<PagedList<Proposals>> getProposedProject(string code)
+        {
+            var query = _context.Proposals.AsQueryable();
+
+            query = query.Where(filter => filter.exec == code);
+
+            var result = await PagedList<Proposals>.CreateAsync(query, 1, 1000);
+            return result;
+        }
     }
 }
