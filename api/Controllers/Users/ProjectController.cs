@@ -112,8 +112,6 @@ namespace api.Controllers.Users
         public async Task<IActionResult> GetProposedProjectList(string code)
         {
             var query = await _unitOfWork.ProjectRepository.GetProposalList(code);
-
-           
             return Ok(query);
         }
 

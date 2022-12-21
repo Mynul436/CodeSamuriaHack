@@ -10,7 +10,6 @@ namespace api.Dto
         public DateTime startdate {get;set;}
         public double completion {get;set;}
         public double actual_cost {get;set;}
-
         public string project_id {get;set;}
     }
 }
