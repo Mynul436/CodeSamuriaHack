@@ -28,6 +28,8 @@ namespace infrastructure.Database.UnitOfWork
 
         public IRepository<ProjectRatting> RattingRepository => new Repository<ProjectRatting>(_context);
 
+        public IRepository<Constraint> Constraints => new Repository<Constraint>(_context);
+
         public async Task CommitAsync()
         {
             await _context.SaveChangesAsync();

@@ -57,6 +57,7 @@ try{
     await Seed.SeedProjects(unitOfWork);
     await Seed.SeedProposal(unitOfWork);
     await Seed.SeedAgencies(unitOfWork);
+    await Seed.SeedConstraints(unitOfWork);
 }
 catch(Exception ex)
 {

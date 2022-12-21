@@ -11,8 +11,8 @@ using infrastructure.Database.StoreContext;
 namespace api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221220201142_AddProjectRatting")]
-    partial class AddProjectRatting
+    [Migration("20221221003231_addConstraintOk")]
+    partial class addConstraintOk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,6 +71,46 @@ namespace api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Citizens");
+                });
+
+            modelBuilder.Entity("core.Entities.Model.Constraint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("code")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("constraint_type")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("max_limit")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Constraints");
+                });
+
+            modelBuilder.Entity("core.Entities.Model.LocationContrainst", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<double>("latitude")
+                        .HasColumnType("double");
+
+                    b.Property<double>("longitude")
+                        .HasColumnType("double");
+
+                    b.Property<int>("max_projects")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LocationContrainsts");
                 });
 
             modelBuilder.Entity("core.Entities.Model.Project", b =>

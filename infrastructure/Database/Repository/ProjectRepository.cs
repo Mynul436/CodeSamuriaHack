@@ -38,6 +38,17 @@ namespace infrastructure.Database.Repository
             return result;
         }
 
+        public async Task<PagedList<Proposals>> GetProposalList(string code)
+        {
+            var query = _context.Proposals.AsQueryable();
+
+             if(code == "MOP") query = query.Where( filter => filter.cost <= 50);
+             if(code == "ECNEC") query = query.Where(filter => filter.cost >= 50);
+
+            var result = await PagedList<Proposals>.CreateAsync(query, 1, 1000);
+            return result;
+        }
+
         public async Task<PagedList<Proposals>> getProposedProject(string code)
         {
             var query = _context.Proposals.AsQueryable();

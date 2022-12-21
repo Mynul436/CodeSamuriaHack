@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace api.Migrations
 {
-    public partial class ProjectProposal : Migration
+    public partial class addConstraintOk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -54,6 +54,40 @@ namespace api.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Citizens", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Constraints",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    code = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    max_limit = table.Column<int>(type: "int", nullable: false),
+                    constraint_type = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Constraints", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "LocationContrainsts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    latitude = table.Column<double>(type: "double", nullable: false),
+                    longitude = table.Column<double>(type: "double", nullable: false),
+                    max_projects = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LocationContrainsts", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -114,6 +148,24 @@ namespace api.Migrations
                     table.PrimaryKey("PK_Proposals", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Rattings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    feedback = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ratting = table.Column<int>(type: "int", nullable: false),
+                    project_id = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Rattings", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -125,10 +177,19 @@ namespace api.Migrations
                 name: "Citizens");
 
             migrationBuilder.DropTable(
+                name: "Constraints");
+
+            migrationBuilder.DropTable(
+                name: "LocationContrainsts");
+
+            migrationBuilder.DropTable(
                 name: "Projects");
 
             migrationBuilder.DropTable(
                 name: "Proposals");
+
+            migrationBuilder.DropTable(
+                name: "Rattings");
         }
     }
 }

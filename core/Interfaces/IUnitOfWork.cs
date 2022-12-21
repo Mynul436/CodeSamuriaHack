@@ -21,6 +21,8 @@ namespace core.Interfaces
 
         IRepository<Citizen> CitizenRepository {get;}
         IRepository<ProjectRatting> RattingRepository{get;}
+
+        IRepository<Constraint> Constraints {get;}
    
         Task CommitAsync();
         Task RollbackAsync();        

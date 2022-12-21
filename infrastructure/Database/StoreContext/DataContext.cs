@@ -80,5 +80,8 @@ namespace infrastructure.Database.StoreContext
         public DbSet<Citizen> Citizens {get;set;}
         public DbSet<ProjectRatting> Rattings {get;set;}
 
+        public DbSet<LocationContrainst> LocationContrainsts {get;set;}
+        public DbSet<Constraint> Constraints {get;set;}
+
     }
 }

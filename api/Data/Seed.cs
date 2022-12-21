@@ -94,7 +94,7 @@ namespace api.Data
 
                 }
 
-                agency.email = RadomString.RandomString(6) + "@.gmail.com";
+                agency.email = RadomString.RandomString(6) + "@gmail.com";
                 agency.password = "Pa$$word";
 
                 _unitOfWork.AgencyRepository.AddAsync(agency);
@@ -133,16 +133,16 @@ namespace api.Data
         }
 
 
-         public static async Task SeedLocationConstraints(IUnitOfWork _unitOfWork)
+         public static async Task SeedConstraints(IUnitOfWork _unitOfWork)
         {
-            if(await _unitOfWork.ProposalRepository.isExitAsync(x => true)) return ;
+            if(await _unitOfWork.Constraints.isExitAsync(x => true)) return ;
 
               var csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture)
             {
                 HasHeaderRecord = false
             };
 
-            using var streamReader = File.OpenText("Data/SampleCSV/proposals.csv");
+            using var streamReader = File.OpenText("Data/SampleCSV/constraints.csv");
 
             using var csvReader = new CsvReader(streamReader, csvConfig);
 
@@ -150,16 +150,25 @@ namespace api.Data
 
             while(csvReader.Read())
             {
-                var proposal = new Proposals();
+                var proposal = new Constraint();
                 for(int i= 0; csvReader.TryGetField<string>(i, out value); i++)
                 {
-                   
+                   if(
+                        value == "code"   || 
+                        value == "max_limit" || 
+                        value == "constraint_type"
+                    ) continue;
+
+                    if(i == 0) proposal.code = value;
+                    if(i == 1) proposal.max_limit = int.Parse(value);
+                    if(i == 2) proposal.constraint_type = value;
+
                 }
 
-              //  _unitOfWork.ProposalRepository.AddAsync(proposal);
+                _unitOfWork.Constraints.AddAsync(proposal);
             }
 
-           // await _unitOfWork.CommitAsync();
+           await _unitOfWork.CommitAsync();
         }
 
          public static async Task SeedExtra(IUnitOfWork _unitOfWork)

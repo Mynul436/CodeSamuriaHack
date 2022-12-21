@@ -11,5 +11,8 @@ namespace core.Interfaces
         Task<PagedList<Proposals>> getProposedProject(string code);
 
         Task<PagedList<Project>> GetProjectsCitizen(double longitide, double latitude, double radious);
+
+        Task<PagedList<Proposals>> GetProposalList(string code);
+        
     }
 }

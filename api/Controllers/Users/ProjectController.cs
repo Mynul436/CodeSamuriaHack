@@ -28,7 +28,14 @@ namespace api.Controllers.Users
         {
             var query = await _unitOfWork.ProjectRepository.GetAllAsync();
 
-            var result = new List<Project>();
+            query = query.OrderByDescending(x => x.completion).ToList();
+            return Ok(query);
+        }
+
+        [HttpGet("get-project-ratting")]
+        public async Task<IActionResult> getProjectRatting(string project_id)
+        {
+            var query = await _unitOfWork.RattingRepository.FindOneAsync(filter => filter.project_id == project_id);
             return Ok(query);
         }
   
@@ -60,7 +67,7 @@ namespace api.Controllers.Users
         }   
 
         [HttpGet("get-proposal")]
-        [Authorize(Roles ="EXEC")]
+    
         public async Task<IActionResult> GetProposedProject(string code)
         {
             var query = await _unitOfWork.ProjectRepository.getProposedProject(code);
@@ -76,7 +83,6 @@ namespace api.Controllers.Users
             if(!await _unitOfWork.ProjectRepository.isExitAsync(filter => filter.project_id == ratting.project_id))
                 return BadRequest();
                 
-
             var _ratting = new ProjectRatting();
             _ratting.project_id = ratting.project_id;
             _ratting.feedback = ratting.feedback;
@@ -87,5 +93,56 @@ namespace api.Controllers.Users
 
             return Ok();
         }
+   
+
+        [HttpGet("get-executing-project")]
+        [Authorize(Roles ="EXEC")]
+        public async Task<IActionResult> GetExecutingProject(string code)
+        {
+            var query = await _unitOfWork.ProjectRepository.FindAsync(filter => filter.exec == code);
+
+            query = query.OrderByDescending(x => x.completion).ToList();
+            return Ok(query);
+        }
+
+
+
+        [HttpGet("proposed-approved")]
+        [Authorize(Roles = "APPROV")]
+        public async Task<IActionResult> GetProposedProjectList(string code)
+        {
+            var query = await _unitOfWork.ProjectRepository.GetProposalList(code);
+
+           
+            return Ok(query);
+        }
+
+
+        [HttpPost("approved-project")]
+        [Authorize(Roles = "APPROV")]
+        public async Task<IActionResult> ApprovedProject(ApprovedProjectDto approved)
+        {
+            if(!await _unitOfWork.ProposalRepository.isExitAsync(filter => filter.project_id == approved.project_id))
+                return BadRequest();
+
+            var pro = await _unitOfWork.ProposalRepository.FindOneAsync(filter => filter.project_id == approved.project_id);
+
+            var project = _mapper.Map<Project>(pro);
+            project.cost = approved.actual_cost;
+            project.start_date = approved.startdate;
+            project.completion = approved.completion;
+
+
+            _unitOfWork.ProposalRepository.RemoveAsync(pro);
+            _unitOfWork.ProjectRepository.AddAsync(project);
+
+            await _unitOfWork.CommitAsync();
+
+            return Ok();
+        }
+
+        
+
+   
     }
 }
