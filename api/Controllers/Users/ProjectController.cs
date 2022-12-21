@@ -67,7 +67,7 @@ namespace api.Controllers.Users
         }   
 
         [HttpGet("get-proposal")]
-    
+        [Authorize(Roles ="EXEC")]
         public async Task<IActionResult> GetProposedProject(string code)
         {
             var query = await _unitOfWork.ProjectRepository.getProposedProject(code);
